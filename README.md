@@ -1,3 +1,10 @@
+While working on End-to-End 4G/5G Network Slicing Service-Orchestration integration/testing activities, we often use several API calls on various Network Domain (Core, Transport...etc) Controller Elements like: NSMF, NSSMF, CNSSMF, RNSSMF...etc. These API calls work as an important bridge between the client and the Network Domain Controllers, perform various operations on Network Elements through GET/POST/DELETE...etc methods.
+
+But what happens when you do not have a Real Network Domain Controller or Not readily available for some reason during your testing or customer Demo/PoCs?
+* Here comes to your aid the magical feature of Mock-Server/Simulator - A Mocking Framework, that mimics the RESTful and SOAP based requests and responses for the desired APIs like: EDENNET, NFMP, VPRN and PGW...etc, which allows you to perform the essential operations on Network Elements for your testing/Demo/PoCs.
+
+This guide includes step-by-step instructions, so that you have a comfortable experience in the RESTful and SOAP based Simulator. Without further ado, let’s get started by discussing all the what(s), why(s) & how(s) about REST & SOAP Simulators!
+
 # Mock-Server
 A java based light-weight server for mocking your RESTful and SOAP based APIs over HTTP or HTTPS With having a browser-based Dashboard Console - for live monitoring of logs, requests, and responses to help on easy tracking or quick debugging. 
 
@@ -40,7 +47,9 @@ Run 'startRestSimulator.sh' or 'startRestSimulator.bat' script
 A Mocking Framework, that mimics the SOAP based service requests and responses for the PGW APIs over HTTP(S) to perform an essential operation.
 
 # SOAP-Mock Configuration:
-Same as REST-Mock Configuration
+Download & unzip the simulator package: SOAPSimulator_100.zip. Edit/Update the 'soapmock.properties'
+   ![image](https://user-images.githubusercontent.com/17194046/155336315-00ccb538-62cf-44c2-a6a6-5625e2a71207.png)
+Run 'startSoapSimulator.sh' script:
 ![image](https://user-images.githubusercontent.com/17194046/155334797-1d9c98e2-5aa6-476b-afb7-cf5bcb7f5452.png)
 
 # SOAP-Mock Console:
